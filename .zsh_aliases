@@ -6,6 +6,7 @@ alias km='kill $(lsof -t -i:8081) >/dev/null 2>&1 || true'
 alias android-metro-reconnect='adb reverse tcp:8081 tcp:8081'
 alias fixdisplays='displayplacer "id:F51FD2D5-7DF7-41EB-9A30-B6395AF25246 res:1920x1080 hz:240 color_depth:7 scaling:off origin:(0,0) degree:0" "id:0E99A0E6-7EB3-4007-AC29-45572CC9408F res:1080x1920 hz:144 color_depth:7 scaling:on origin:(1920,-409) degree:90"'
 alias dl='AWS_PROFILE=beam-tech-org-services aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 932532311803.dkr.ecr.us-east-1.amazonaws.com'
+alias sz='source ~/.zshrc'
 
 # Helpful navigation
 alias cdbrush='cd ~/repos/beam-brush-unified'
@@ -29,3 +30,14 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
 # CPU Temp
 alias temp='sudo powermetrics --samplers smc |grep -i "CPU die temperature"'
+
+# Tmux
+alias tnew='tmux new-session -c "$PWD" -s'
+alias tkill='tmux kill-ses -t'
+
+# Nvim
+alias cdnvim='cd ~/.config/nvim/'
+
+# Tmuxinator
+alias start='tmuxinator start all'
+alias stop='tmuxinator stop all'
