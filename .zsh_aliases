@@ -34,6 +34,7 @@ alias temp='sudo powermetrics --samplers smc |grep -i "CPU die temperature"'
 # Tmux
 alias tnew='tmux new-session -c "$PWD" -s'
 alias tkill='tmux kill-ses -t'
+alias tk='tmux kill-server'
 
 # Nvim
 alias cdnvim='cd ~/.config/nvim/'
