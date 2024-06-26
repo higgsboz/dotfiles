@@ -1,0 +1,33 @@
+# https://alacritty.org/config-alacritty.html
+
+###########
+# GENERAL #
+###########
+
+import = [
+  # "~/.config/alacritty/catppuccin-latte.toml",
+  "~/.config/alacritty/catppuccin-frappe.toml",
+  # "~/.config/alacritty/catppuccin-macchiato.toml",
+  # "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+########
+# FONT #
+########
+
+[font]
+
+# Normal font style
+normal = { family = "Hack NFM", style = "Regular" } # Default for Linux/BSD: "monospace", Regular
+
+# Larger font size
+size = 14
+
+# Shell program and its arguments
+# Default for Linux/BSD/macOS is $SHELL or user's login shell
+[shell]
+program = "/bin/zsh" # Example for Linux/BSD/macOS
+args = ["-l"]
+
+[env]
+term = "xterm-256color"
