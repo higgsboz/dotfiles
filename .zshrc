@@ -65,15 +65,12 @@ unset BASE_DOMAIN
 # You can use whatever you want as an alias, like for Mondays:
 # eval $(thefuck --alias FUCK)
 
-
-# test
-# export PNPM_HOME="/Users/brandonminner/Library/pnpm"
-# export PATH="$PNPM_HOME:$PATH"
-# asdf
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source ~/temp/zsh-syntax-highlighting/themes/catppuccin_frappe-zsh-syntax-highlighting.zsh
 source /Users/brandonminner/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # pnpm
