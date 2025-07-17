@@ -4,8 +4,20 @@ alias vim='nvim'
 alias railsc='beam-cli eph exec mobile beam-api bundle exec rails c'
 alias km='kill $(lsof -t -i:8081) >/dev/null 2>&1 || true'
 alias android-metro-reconnect='adb reverse tcp:8081 tcp:8081'
-alias fixdisplays='displayplacer "id:F51FD2D5-7DF7-41EB-9A30-B6395AF25246 res:1920x1080 hz:240 color_depth:7 scaling:off origin:(0,0) degree:0" "id:0E99A0E6-7EB3-4007-AC29-45572CC9408F res:1080x1920 hz:144 color_depth:7 scaling:on origin:(1920,-409) degree:90"'
+# alias fixdisplays='displayplacer "id:F51FD2D5-7DF7-41EB-9A30-B6395AF25246 res:1920x1080 hz:240 color_depth:7 scaling:off origin:(0,0) degree:0" "id:0E99A0E6-7EB3-4007-AC29-45572CC9408F res:1080x1920 hz:144 color_depth:7 scaling:on origin:(1920,-409) degree:90"'
+alias fixdisplays='displayplacer "id:0C187C05-6278-4A04-8EC4-327CF8154245 res:1920x1080 hz:144 color_depth:8 enabled:true scaling:off origin:(0,0) degree:0" "id:5D67991D-891D-4DDD-9462-4AE5E05CCCDD res:1080x1920 hz:144 color_depth:8 enabled:true scaling:off origin:(1920,-428) degree:90"'
 alias sz='source ~/.zshrc'
+alias up='hub dev up'
+alias k='kubectl'
+# alias fix_playwright='mise use go@latest; go run github.com/playwright-community/playwright-go/cmd/playwright@v0.4201.0 install --with-deps'
+alias fix_playwright='mise use go@latest; go run github.com/playwright-community/playwright-go/cmd/playwright@v0.4702.0 install --with-deps'
+alias switch="./scripts/db_switch"
+alias gg="git grep"
+alias remove_bbs="rm -rf /System/Volumes/Data/private/tmp/tumbled/bbs"
+alias remove_hig="rm -rf /System/Volumes/Data/private/tmp/tumbled/hig"
+alias config_bbs="update_env_var .env.development TENANT_CONFIG_NAME bbs"
+alias config_hig="update_env_var .env.development TENANT_CONFIG_NAME hig"
+alias clear_binlogs="rm -i /opt/homebrew/var/mysql/binlog*"
 source ~/.beam_aliases
 
 # Helpful navigation
@@ -15,10 +27,15 @@ alias cdapi='cd ~/repos/beam-api'
 alias cdwork='cd ~/workspace'
 alias cdjs='cd ~/repos/js-frontend'
 alias cdbf='cd ~/repos/beam-frontend'
-alias cdobs='cd ~/workspace/My\ Vault'
+alias cdobs='cd ~/workspace/vault'
 alias cdquotes='cd ~/repos/quotes-server'
 alias cdperks='cd ~/repos/perks-server'
 alias cdproviders='cd ~/repos/providers-server'
+alias cdunder='cd ~/repos/underwriting-server'
+alias cdcommons='cd ~/repos/beam-commons'
+alias cdacc='cd ~/repos/accounting-server'
+alias cdui='cd ~/repos/js-frontend/packages/libs/ui'
+alias cdstyle='cd ~/repos/js-frontend/packages/apps/styleguide'
 
 # Git
 alias gco='git checkout'
@@ -36,6 +53,7 @@ alias tnew='tmux new-session -c "$PWD" -s'
 alias tkill='tmux kill-ses -t'
 alias tk='tmux kill-server'
 alias ta='tmux a -t'
+alias tx='tmuxinator'
 
 # Nvim
 alias cdnvim='cd ~/.config/nvim/'

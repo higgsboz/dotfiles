@@ -45,16 +45,31 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # JVM configuration
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"
 export JVM_OPTS="-Xmx3200m"
 export PATH="$JAVA_HOME/bin:$PATH"
 
+# Mysql configuration
+# export MYSQLCLIENT_CFLAGS="-I/opt/homebrew/opt/mysql/include/mysql"
+# export MYSQLCLIENT_LDFLAGS="-L/opt/homebrew/opt/mysql/lib -lmysqlclient"
+# export PATH="$(brew --prefix mysql-client)/bin:$PATH"
+
+# Lua Test Framework
+export PATH="$HOME/.luarocks/bin:$PATH"
 
 # Native Brew
 export PATH="/opt/homebrew/bin:$PATH"
 
 # Obsidian
-export PATH="$PATH:$HOME/Users/brandonminner/workspace/My\ Vault/bg2md.rb"
+export PATH="$PATH:$HOME/workspace/My\ Vault/bg2md.rb"
+
+# Aider
+if [[ -f "$HOME/.api_keys" ]]; then
+  source "$HOME/.api_keys"
+fi
+
+export PATH="$PATH:$HOME/.local/bin"
 
 unset GEM_PATH
 unset GEM_HOME
@@ -81,11 +96,9 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# bun completions
-[ -s "/Users/brandonminner/.bun/_bun" ] && source "/Users/brandonminner/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
+export PATH="$HOME/.local/share/mise/shims:$PATH"
 eval "$(mise activate zsh)"
+
+source ~/.beam-cli/alias
+
+export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
