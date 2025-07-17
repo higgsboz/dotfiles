@@ -1,0 +1,27 @@
+# /Users/brandonminner/.config/tmuxinator/essential.yml
+
+name: essential
+
+defaults: &worker_layout
+  layout: 5b6d,240x66,0,0{119x66,0,0,49,120x66,120,0[120x32,120,0,50,120x33,120,33,51]}
+
+windows:
+  - beam-api:
+      root: ~/repos/beam-api
+      <<: *worker_layout
+      panes:
+        - hub dev up
+        - hub dev up sidekiq
+        - rails c
+  - beam-frontend:
+      root: ~/repos/beam-frontend
+      layout: even-horizontal
+      panes:
+        - hub dev up
+  - quotes-server:
+      root: ~/repos/quotes-server
+      <<: *worker_layout
+      panes:
+        - hub dev up
+        - hub dev up worker
+        - rails c

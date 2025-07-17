@@ -1,0 +1,10 @@
+theme = catppuccin-frappe
+
+font-family = "Hack Nerd Font"
+font-thicken = true
+font-size = 12
+
+mouse-hide-while-typing = true
+window-decoration = true
+
+keybind = super+r=reload_config

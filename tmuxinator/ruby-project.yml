@@ -1,0 +1,12 @@
+# /Users/brandonminner/.config/tmuxinator/ruby-project.yml
+
+name: <%= @args[0] %>
+root: ~/repos/<%= @args[0] %>
+
+windows:
+  - console:
+      layout: even-horizontal
+      panes:
+        - hub dev up
+        - rails c
+  - <%= @args[0] %>: nvim .

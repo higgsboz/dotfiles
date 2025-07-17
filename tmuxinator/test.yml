@@ -1,0 +1,11 @@
+name: test
+
+# pre_window: echo pwd
+
+windows:
+  - beam-api:
+      root: ~/repos/beam-api
+      pre:
+        - echo "Setting up editor..."
+      panes:
+        - ls

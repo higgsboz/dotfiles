@@ -1,0 +1,25 @@
+# /Users/brandonminner/.config/tmuxinator/all.yml
+
+name: editors
+
+windows:
+  - beam-api:
+      root: ~/repos/beam-api
+      layout: even-horizontal
+      panes: nvim .
+  - beam-frontend:
+      root: ~/repos/beam-frontend
+      layout: even-horizontal
+      panes: nvim .
+  - quotes-server:
+      root: ~/repos/quotes-server
+      layout: even-horizontal
+      panes: nvim .
+  - js-frontend:
+      root: ~/repos/js-frontend
+      layout: even-horizontal
+      panes: nvim .
+  - authentication-server:
+      root: ~/repos/authentication-server
+      layout: even-horizontal
+      panes: nvim .
